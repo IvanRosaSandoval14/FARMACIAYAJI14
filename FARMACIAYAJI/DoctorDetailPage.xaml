@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FARMACIAYAJI.DoctorDetailPage"
+             BackgroundColor="#5f76a1" 
+             Title="INFORMACION DEL DOCTOR">
+
+    <!-- Recuadro de información del Doctor -->
+    <ScrollView>
+        
+        <StackLayout Padding="20">
+            <Frame BackgroundColor="#5f76a1" BorderColor="White" CornerRadius="10" Padding="10" HasShadow="True">
+                <!-- Información de la Doctora -->
+                <StackLayout Padding="10">
+                    <Image x:Name="DoctorFoto" WidthRequest="100" HeightRequest="100"/>
+                    <Label x:Name="DoctorNombre" FontSize="28" FontAttributes="Bold" TextColor="WhiteSmoke"/>
+                    <Label x:Name="DoctorEspecialidad" FontSize="20" TextColor="WhiteSmoke"/>
+                    <Label x:Name="DoctorEdad" FontSize="18" TextColor="WhiteSmoke"/>
+                    <Label x:Name="DoctorTelefono" FontSize="18" TextColor="WhiteSmoke"/>
+                    <Label x:Name="DoctorCorreo" FontSize="18" TextColor="WhiteSmoke"/>
+                    <Label x:Name="DoctorLugarAtencion" FontSize="18" TextColor="WhiteSmoke"/>
+                    <Label x:Name="DoctorHorarioAtencion" FontSize="18" TextColor="WhiteSmoke"/>
+                </StackLayout>
+            </Frame>
+
+            <!-- Formulario para agendar cita -->
+            <Label Text="Datos del Paciente" FontSize="35" FontAttributes="Bold" TextColor="White" Padding="10,20,10,10"/>
+            <Entry x:Name="PacienteNombre" Placeholder="Nombre del Paciente" TextColor="White" />
+            <Entry x:Name="PacienteTelefono" Placeholder="Teléfono del Paciente" Keyboard="Telephone" TextColor="White"/>
+            <TimePicker x:Name="HoraCita" TextColor="White" />
+            <Button Text="Agendar Cita" Background="#00FF04" TextColor="Black" Clicked="OnAgendarCitaClicked"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

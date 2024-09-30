@@ -1,0 +1,53 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FARMACIAYAJI"
+             x:Class="FARMACIAYAJI.ATENCION"
+             BackgroundColor="#5f76a1"
+             Title="ATENCION">
+
+    <ScrollView>
+        <Frame BackgroundColor="#5f76a1" BorderColor="White" HeightRequest="2000" WidthRequest="350">
+            <VerticalStackLayout Spacing="20">
+                <Label Text="Registro de Empleados" FontSize="32" HorizontalOptions="Center" TextColor="White" />
+
+                <Entry x:Name="EntryNombre" TextColor="White" Placeholder="Nombre Completo" />
+                <Entry x:Name="EntryEdad" TextColor="White" Placeholder="Edad" Keyboard="Numeric" />
+                <Entry x:Name="EntryDUI" TextColor="White" Placeholder="N° de DUI" />
+                <Entry x:Name="EntryTelefono" TextColor="White" Placeholder="N° de Teléfono" Keyboard="Numeric" />
+                <Entry x:Name="EntryResidencia" TextColor="White" Placeholder="Residencia" />
+
+                <Picker  TextColor="White" x:Name="PickerNivelEstudio" Title="Nivel de Estudio" >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Primer Ciclo</x:String>
+                            <x:String>Segundo Ciclo</x:String>
+                            <x:String>Tercer Ciclo</x:String>
+                            <x:String>Bachillerato</x:String>
+                            <x:String>Técnico</x:String>
+                            <x:String>Universidad</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+
+                <Button x:Name="agregarBtn" Text="Agregar" Clicked="agregarBtn_Clicked" Background="#00FF04" TextColor="Black"/>
+
+                <ListView x:Name="listview" HasUnevenRows="True" ItemTapped="listview_ItemTapped" BackgroundColor="#FFFFFF">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Padding="10">
+                                    <Label Text="{Binding NombreCompleto}" FontSize="20" FontAttributes="Bold" />
+                                    <Label Text="{Binding DUI}" />
+                                    <Label Text="{Binding Telefono}" />
+                                    <Label Text="{Binding Residencia}" />
+                                    <Label Text="{Binding NivelEstudio}" />
+                                   
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </VerticalStackLayout>
+        </Frame>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FARMACIAYAJI"
+             x:Class="FARMACIAYAJI.MainPage"
+             BackgroundColor="#5f76a1"
+             Title="BIENVENIDO">
+
+    <ScrollView>
+        <Frame BackgroundColor="#5f76a1" BorderColor="White" HeightRequest="650" WidthRequest="450">
+            <VerticalStackLayout Padding="30,0" Spacing="25">
+
+                <Border VerticalOptions="Center" HorizontalOptions="Center" Margin="0,0">
+                    <Image Margin="0,0" HeightRequest="90" WidthRequest="98" Source="kirby.jpg" />
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="50,0,0,50"/>
+                    </Border.StrokeShape>
+                </Border>
+
+                <Label
+                    Text="FARMACIA YAJI"
+                    FontFamily="sans-serif-condensed"
+                    FontSize="33" 
+                    FontAttributes="Bold"              
+                    TextColor="WhiteSmoke"
+                    HorizontalOptions="Center"
+                    SemanticProperties.HeadingLevel="Level1" />
+
+                <Label
+                    Text="¡TU SALUD ES NUESTRA PRIORIDAD!"
+                    TextColor="Beige"
+                    Style="{StaticResource SubHeadline}"
+                    SemanticProperties.HeadingLevel="Level2"
+                    SemanticProperties.Description="Welcome to dot net Multi platform App U" />
+
+              
+                <!-- Botón para navegar a la página de Registro -->
+                <Button
+                    x:Name="RegistrarBtn"
+                    Text="REGISTRAR" 
+                    TextColor="Black"
+                    Clicked="OnREGISTRARClicked"
+                    Background="#F06C6C"
+                    HorizontalOptions="Fill" />
+
+            </VerticalStackLayout>
+        </Frame>
+    </ScrollView>
+
+</ContentPage>

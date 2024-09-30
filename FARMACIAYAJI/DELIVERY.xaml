@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FARMACIAYAJI.DELIVERY"
+              BackgroundColor="#5f76a1">
+
+    <ScrollView>
+        <Frame BackgroundColor="#5f76a1" BorderColor="White" HeightRequest="900" WidthRequest="350">
+            <Grid RowDefinitions=".3,.7*">
+           
+            <!-- Imagen de fondo y opacidad -->
+            <Image Aspect="AspectFill" Source="kirby.jpg"/>
+            <Grid BackgroundColor="#35407F" Opacity=".9"/>
+
+         
+
+
+            <Grid Grid.Row="1">
+               
+                <VerticalStackLayout Margin="30,0,30,0">
+                    <!-- Bienvenida -->
+                    <Label FontAttributes="Bold" FontFamily="bold" FontSize="49" Text="BIENVENIDO!!" TextColor="Beige"/>
+                        <Label FontFamily="medium" FontSize="25" Text="HAZ TU PEDIDO EXPRESS!!" TextColor="Beige"/>
+
+                    <!-- Formulario de datos -->
+                    <VerticalStackLayout Margin="0,30,0,0">
+                            <Entry x:Name="nombreEntry" Placeholder="Nombre Completo" VerticalOptions="Center" TextColor="Beige"  />
+                            <Entry x:Name="duiEntry" Placeholder="N° de DUI" Keyboard="Numeric" VerticalOptions="Center" TextColor="Beige" />
+                            <Entry x:Name="telefonoEntry" Placeholder="Teléfono" Keyboard="Telephone" VerticalOptions="Center" TextColor="Beige" />
+                            <Entry x:Name="direccionEntry" Placeholder="Dirección de Entrega" VerticalOptions="Center" TextColor="Beige" />
+                            <Entry x:Name="emailEntry" Placeholder="Correo Electrónico" Keyboard="Email" VerticalOptions="Center" TextColor="Beige" />
+                    </VerticalStackLayout>
+
+                    <!-- Botón para hacer pedido -->
+                        <Button Text="Hacer Pedido" BackgroundColor="#00FF04" TextColor="Black" Clicked="OnHacerPedidoClicked"/>
+                    <Image Aspect="AspectFit" HeightRequest="120" Source="delii.png"/>
+                </VerticalStackLayout>
+            </Grid>
+        </Grid>
+        </Frame>
+    </ScrollView>
+</ContentPage>

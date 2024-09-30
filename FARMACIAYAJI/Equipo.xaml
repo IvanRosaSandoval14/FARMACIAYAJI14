@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FARMACIAYAJI"  
+    x:Class="FARMACIAYAJI.Equipo"
+             BackgroundColor="#5f76a1">
+
+    <ScrollView>
+        <Frame BackgroundColor="#5f76a1" BorderColor="White" HeightRequest="650" WidthRequest="350">
+            <StackLayout Padding="10">
+                <Label Text="Seleccione un Doctor" FontSize="30" FontAttributes="Bold"  TextColor="White" />
+
+            <ListView x:Name="DoctoresListView" ItemTapped="OnDoctorSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="10">
+                                <Image Source="{Binding Foto}" WidthRequest="45" HeightRequest="45"/>
+                                    <Label Text="{Binding NombreCompleto}" FontSize="25" VerticalOptions="Center"  TextColor="White"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+        </Frame>
+    </ScrollView>
+
+</ContentPage>

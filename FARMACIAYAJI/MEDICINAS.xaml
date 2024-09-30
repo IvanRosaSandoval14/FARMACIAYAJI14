@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FARMACIAYAJI.MEDICINAS"
+            BackgroundColor="#5f76a1"
+             Title="MEDICINAS">
+    <ScrollView>
+        <Frame BackgroundColor="#5f76a1" BorderColor="White" HeightRequest="650" WidthRequest="430">
+            
+        <VerticalStackLayout
+    HorizontalOptions="CenterAndExpand"
+    VerticalOptions="CenterAndExpand"
+    Padding="10">
+
+        <!-- Título de la sección -->
+        <Label 
+            Text="SECCION DE MEDICINAS"
+            FontSize="40"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            FontAttributes="None, Bold"
+            TextColor="Beige"/>
+
+        <!-- Grid con botones de medicinas -->
+        <Grid
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            RowSpacing="20"
+            ColumnSpacing="70">
+
+            <!-- Definición de filas y columnas -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <!-- Botón para Vitaminas -->
+            <Button 
+                Grid.Row="0" 
+                Grid.Column="0"
+                WidthRequest="150"  
+                HeightRequest="150"            
+                ImageSource="vitata.png"
+                BackgroundColor="Transparent" 
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                BorderColor="Transparent" 
+                Clicked="OnVitaminasClicked"/>
+
+            <!-- Etiqueta para Vitaminas -->
+            <Label 
+                Grid.Row="1" 
+                Grid.Column="0"
+                Text="VITAMINAS"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                FontSize="16"
+                TextColor="Beige" />
+
+            <!-- Botón para Jarabes -->
+            <Button 
+                Grid.Row="0" 
+                Grid.Column="1"
+                WidthRequest="150"  
+                HeightRequest="150"            
+                ImageSource="jarabebe.png"
+                BackgroundColor="Transparent" 
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                BorderColor="Transparent" 
+                Clicked="OnJarabesClicked"/>
+
+            <!-- Etiqueta para Jarabes -->
+            <Label 
+                Grid.Row="1" 
+                Grid.Column="1"
+                Text="JARABES"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                FontSize="16"
+                TextColor="Beige" />
+
+            <!-- Botón para Pastillas -->
+            <Button 
+                Grid.Row="2" 
+                Grid.Column="0"
+                WidthRequest="150"  
+                HeightRequest="150"            
+                ImageSource="capcap.png"
+                BackgroundColor="Transparent" 
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                BorderColor="Transparent" 
+                Clicked="OnPastillasClicked"/>
+
+            <!-- Etiqueta para Pastillas -->
+            <Label 
+                Grid.Row="3" 
+                Grid.Column="0"
+                Text="PASTILLAS"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                FontSize="16"
+                TextColor="Beige" />
+
+            <!-- Botón para Inyecciones -->
+            <Button 
+                Grid.Row="2" 
+                Grid.Column="1"
+                WidthRequest="150"  
+                HeightRequest="150"            
+                ImageSource="inyeinye.png"
+                BackgroundColor="Transparent" 
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                BorderColor="Transparent" 
+                Clicked="OnInyeccionesClicked"/>
+
+            <!-- Etiqueta para Inyecciones -->
+            <Label 
+                Grid.Row="3" 
+                Grid.Column="1"
+                Text="INYECCIONES"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                FontSize="16"
+                TextColor="Beige" />
+
+        </Grid>
+
+    </VerticalStackLayout>
+        </Frame>
+    </ScrollView>
+</ContentPage>

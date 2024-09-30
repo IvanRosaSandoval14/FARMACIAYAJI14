@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FARMACIAYAJI.FACTURACION"
+             BackgroundColor="#5f76a1"
+             Title="Facturación">
+    <ScrollView>
+        <Frame BackgroundColor="#5f76a1" BorderColor="White" HeightRequest="650" WidthRequest="350">
+            <VerticalStackLayout Padding="30" Spacing="10">
+
+            <Label Text="Datos del Cliente" FontSize="28" HorizontalOptions="Center" TextColor="Beige" FontAttributes="None, Bold"/>
+
+            <!-- Campos del Cliente -->
+            <Entry x:Name="nombreClienteEntry" Placeholder="Nombre del Cliente" TextColor="Beige"/>
+            <Entry x:Name="correoClienteEntry" Placeholder="Correo del Cliente" TextColor="Beige" />
+
+            <Label Text="Agregar Producto" FontSize="24" HorizontalOptions="Center" TextColor="Beige" FontAttributes="None, Bold"/>
+
+            <!-- Campos para Producto -->
+            <Entry x:Name="nombreProductoEntry" Placeholder="Nombre del Producto" TextColor="Beige"/>
+            <Entry x:Name="precioProductoEntry" Placeholder="Precio" Keyboard="Numeric" TextColor="Beige" />
+            <Entry x:Name="stockProductoEntry" Placeholder="Cantidad" Keyboard="Numeric" TextColor="Beige" />
+
+            <!-- Botón para Agregar Producto -->
+            <Button Text="Agregar Producto" Clicked="OnAgregarProductoClicked" Background="#00D1FF"  TextColor="Black"/>
+
+            <!-- Mostrar el total de la factura -->
+            <Label x:Name="totalLabel" Text="Total: $" FontSize="18" TextColor="Beige"/>
+
+            <!-- Botón para Finalizar la Compra -->
+            <Button Text="Finalizar Compra" Clicked="OnFinalizarCompraClicked" Background="#00FF04" TextColor="Black" />
+
+            <!-- Botón para ir a la página de delivery -->
+            <Button Text="Ir a Delivery" Clicked="OnIrADeliveryClicked"    Background="#F06C6C" TextColor="Black" />
+
+        </VerticalStackLayout>
+        </Frame>
+    </ScrollView>
+</ContentPage>

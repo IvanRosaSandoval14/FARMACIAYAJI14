@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FARMACIAYAJI.CitaPage"
+             Title="CitaPage">
+    <StackLayout Padding="20">
+        <Label Text="Agendar Cita" FontSize="24" />
+        <Label Text="Doctor: " />
+        <Label x:Name="DoctorName" />
+
+        <Entry Placeholder="Nombre Completo" />
+        <Entry Placeholder="Edad" Keyboard="Numeric" />
+        <Entry Placeholder="Teléfono" Keyboard="Telephone" />
+        <Entry Placeholder="Tipo de Cita" />
+        <DatePicker x:Name="FechaCita" />
+
+
+    </StackLayout>
+</ContentPage>

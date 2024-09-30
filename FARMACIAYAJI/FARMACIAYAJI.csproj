@@ -1,0 +1,195 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>net8.0-android;net8.0-ios;net8.0-maccatalyst</TargetFrameworks>
+		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net8.0-windows10.0.19041.0</TargetFrameworks>
+		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
+		<!-- <TargetFrameworks>$(TargetFrameworks);net8.0-tizen</TargetFrameworks> -->
+
+		<!-- Note for MacCatalyst:
+		The default runtime is maccatalyst-x64, except in Release config, in which case the default is maccatalyst-x64;maccatalyst-arm64.
+		When specifying both architectures, use the plural <RuntimeIdentifiers> instead of the singular <RuntimeIdentifier>.
+		The Mac App Store will NOT accept apps with ONLY maccatalyst-arm64 indicated;
+		either BOTH runtimes must be indicated or ONLY macatalyst-x64. -->
+		<!-- For example: <RuntimeIdentifiers>maccatalyst-x64;maccatalyst-arm64</RuntimeIdentifiers> -->
+
+		<OutputType>Exe</OutputType>
+		<RootNamespace>FARMACIAYAJI</RootNamespace>
+		<UseMaui>true</UseMaui>
+		<SingleProject>true</SingleProject>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>disable</Nullable>
+
+		<!-- Display name -->
+		<ApplicationTitle>FARMACIAYAJI</ApplicationTitle>
+
+		<!-- App Identifier -->
+		<ApplicationId>com.companyname.farmaciayaji</ApplicationId>
+
+		<!-- Versions -->
+		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+		<ApplicationVersion>1</ApplicationVersion>
+
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">11.0</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">13.1</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
+		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<!-- App Icon -->
+		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
+
+		<!-- Splash Screen -->
+		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
+
+		<!-- Images -->
+		<MauiImage Include="Resources\Images\*" />
+		<MauiImage Update="Resources\Images\dotnet_bot.png" Resize="True" BaseSize="300,185" />
+
+		<!-- Custom Fonts -->
+		<MauiFont Include="Resources\Fonts\*" />
+
+		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
+		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="Resources\Images\A.png" />
+	  <None Remove="Resources\Images\acetaa.png" />
+	  <None Remove="Resources\Images\acetaminofen .png" />
+	  <None Remove="Resources\Images\alcance.png" />
+	  <None Remove="Resources\Images\ambro.png" />
+	  <None Remove="Resources\Images\amox.png" />
+	  <None Remove="Resources\Images\anestesiologo.png" />
+	  <None Remove="Resources\Images\anti.png" />
+	  <None Remove="Resources\Images\aspi.png" />
+	  <None Remove="Resources\Images\atencion.png" />
+	  <None Remove="Resources\Images\baca.png" />
+	  <None Remove="Resources\Images\bannerr.png" />
+	  <None Remove="Resources\Images\betas.png" />
+	  <None Remove="Resources\Images\capcap.png" />
+	  <None Remove="Resources\Images\cetra.png" />
+	  <None Remove="Resources\Images\cipro.png" />
+	  <None Remove="Resources\Images\ciru.png" />
+	  <None Remove="Resources\Images\cirujano.png" />
+	  <None Remove="Resources\Images\codo.png" />
+	  <None Remove="Resources\Images\corre.png" />
+	  <None Remove="Resources\Images\curriculum.png" />
+	  <None Remove="Resources\Images\delii.png" />
+	  <None Remove="Resources\Images\delilili.png" />
+	  <None Remove="Resources\Images\delivery.png" />
+	  <None Remove="Resources\Images\dentista.png" />
+	  <None Remove="Resources\Images\dermatologo.png" />
+	  <None Remove="Resources\Images\doctor.png" />
+	  <None Remove="Resources\Images\doctorana.png" />
+	  <None Remove="Resources\Images\euro.png" />
+	  <None Remove="Resources\Images\exflu.png" />
+	  <None Remove="Resources\Images\factura .png" />
+	  <None Remove="Resources\Images\facturara.png" />
+	  <None Remove="Resources\Images\ford.png" />
+	  <None Remove="Resources\Images\fosfo.png" />
+	  <None Remove="Resources\Images\ginecologo.png" />
+	  <None Remove="Resources\Images\glude.png" />
+	  <None Remove="Resources\Images\ibu.png" />
+	  <None Remove="Resources\Images\ig.jpeg" />
+	  <None Remove="Resources\Images\igyaji.png" />
+	  <None Remove="Resources\Images\instagram.png" />
+	  <None Remove="Resources\Images\inyecciones.png" />
+	  <None Remove="Resources\Images\inyeinye.png" />
+	  <None Remove="Resources\Images\jarabebe.png" />
+	  <None Remove="Resources\Images\kirby.jpg" />
+	  <None Remove="Resources\Images\market.png" />
+	  <None Remove="Resources\Images\medicoped.png" />
+	  <None Remove="Resources\Images\medidi.png" />
+	  <None Remove="Resources\Images\mes.png" />
+	  <None Remove="Resources\Images\much.jpg" />
+	  <None Remove="Resources\Images\multi.png" />
+	  <None Remove="Resources\Images\Neervitran.png" />
+	  <None Remove="Resources\Images\Nervii.png" />
+	  <None Remove="Resources\Images\Nervitran.png" />
+	  <None Remove="Resources\Images\neuro.png" />
+	  <None Remove="Resources\Images\ortopedista.png" />
+	  <None Remove="Resources\Images\pago.png" />
+	  <None Remove="Resources\Images\pasti.jpg" />
+	  <None Remove="Resources\Images\pastillas.png" />
+	  <None Remove="Resources\Images\pedi.png" />
+	  <None Remove="Resources\Images\psiquiatra.png" />
+	  <None Remove="Resources\Images\registro.png" />
+	  <None Remove="Resources\Images\team.png" />
+	  <None Remove="Resources\Images\tran.png" />
+	  <None Remove="Resources\Images\treinta.png" />
+	  <None Remove="Resources\Images\VA.png" />
+	  <None Remove="Resources\Images\vacu.jpg" />
+	  <None Remove="Resources\Images\veinticuatro.png" />
+	  <None Remove="Resources\Images\VIJO.png" />
+	  <None Remove="Resources\Images\vijoo.png" />
+	  <None Remove="Resources\Images\Vita .png" />
+	  <None Remove="Resources\Images\VitaA.png" />
+	  <None Remove="Resources\Images\VitaminAA.png" />
+	  <None Remove="Resources\Images\vitass.png" />
+	  <None Remove="Resources\Images\vitata.png" />
+	  <None Remove="Resources\Images\vitatata.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
+		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
+		<PackageReference Include="SQLite-net-pcl" Version="1.9.172" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="AgendarCitaPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="AppointmentPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="ATENCION.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="CitaPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="DELIVERY.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="DoctorDetailPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Equipo.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="FACTURACION.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="INGRESAR.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="INYECCIONES.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="JARABES.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Marketing.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="MEDICINAS.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="PASTILLAS.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Registro.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="VITAMINAS.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
+</Project>

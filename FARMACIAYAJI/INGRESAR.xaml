@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FARMACIAYAJI.INGRESAR"
+             BackgroundColor="#5f76a1">
+
+    <Frame BackgroundColor="#5f76a1" BorderColor="White" HeightRequest="690" WidthRequest="450">
+        <ScrollView>
+            <VerticalStackLayout Padding="40,0" Spacing="10">
+
+                <!-- Título de la página -->
+                <Label 
+                    Text="B I E N V E N I D O"
+                    FontSize="50"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Start" 
+                    TextColor="White"/>
+
+                <!-- Mostrar nombre y apellido del usuario registrado -->
+                <Label 
+                    x:Name="UsuarioNombreLabel"
+                    FontSize="30"
+                    TextColor="Beige"
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand" />
+
+                <!-- Grid de botones -->
+                <Grid 
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    RowSpacing="10" 
+                    ColumnSpacing="20">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Botón Medicinas -->
+                    <Button 
+                        Grid.Row="0" 
+                        Grid.Column="0"
+                        WidthRequest="150"  
+                        HeightRequest="150"            
+                        ImageSource="medidi.png"
+                        BackgroundColor="Transparent" 
+                        HorizontalOptions="Center"
+                        VerticalOptions="End"
+                        BorderColor="Transparent" 
+                        Clicked="OnMedicinasClicked"/>
+
+                    <Label 
+                        Grid.Row="1" 
+                        Grid.Column="0"
+                        Text="MEDICINAS"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Start"
+                        FontSize="16"
+                        TextColor="Beige" />
+
+                    <!-- Botón Facturación -->
+                    <Button 
+                        Grid.Row="0" 
+                        Grid.Column="1"
+                        WidthRequest="150"  
+                        HeightRequest="150"            
+                        ImageSource="facturara.png"
+                        BackgroundColor="Transparent" 
+                        HorizontalOptions="Center"
+                        VerticalOptions="End"
+                        BorderColor="Transparent" 
+                        Clicked="OnFacturacionClicked"/>
+
+                    <Label 
+                        Grid.Row="1" 
+                        Grid.Column="1"
+                        Text="FACTURACION"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Start"
+                        FontSize="16"
+                        TextColor="Beige"/>
+
+                    <!-- Botón Contratación -->
+                    <Button 
+                        Grid.Row="2" 
+                        Grid.Column="0"
+                        WidthRequest="150"  
+                        HeightRequest="150"            
+                        ImageSource="curriculum.png"
+                        BackgroundColor="Transparent" 
+                        HorizontalOptions="Center"
+                        VerticalOptions="End"
+                        BorderColor="Transparent" 
+                        Clicked="OnAtencionClicked"/>
+
+                    <Label 
+                        Grid.Row="3" 
+                        Grid.Column="0"
+                        Text="CONTRATACION"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Start"
+                        FontSize="16"
+                        TextColor="Beige" />
+
+                    <!-- Botón Delivery -->
+                    <Button 
+                        Grid.Row="2" 
+                        Grid.Column="1"
+                        WidthRequest="150"  
+                        HeightRequest="150"            
+                        ImageSource="delilili.png"
+                        BackgroundColor="Transparent" 
+                        HorizontalOptions="Center"
+                        VerticalOptions="End"
+                        BorderColor="Transparent" 
+                        Clicked="OnDeliveryClicked"/>
+
+                    <Label 
+                        Grid.Row="3" 
+                        Grid.Column="1"
+                        Text="DELIVERY"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Start"
+                        FontSize="16"
+                        TextColor="Beige" />
+
+                    <!-- Botón Marketing -->
+                    <Button 
+    Grid.Row="4" 
+    Grid.Column="0"
+    WidthRequest="150"  
+    HeightRequest="150"            
+    ImageSource="market.png"
+    BackgroundColor="Transparent" 
+    HorizontalOptions="Center"
+    VerticalOptions="End"
+    BorderColor="Transparent" 
+    Clicked="OnMarketClicked"/>
+
+                    <Label 
+    Grid.Row="5" 
+    Grid.Column="0"
+    Text="MARKETING"
+    HorizontalOptions="Center"
+    VerticalOptions="Start"
+    FontSize="16"
+    TextColor="Beige" />
+
+                    <!-- Botón Equipo -->
+                    <Button 
+    Grid.Row="4" 
+    Grid.Column="1"
+    WidthRequest="150"  
+    HeightRequest="150"            
+    ImageSource="team.png"
+    BackgroundColor="Transparent" 
+    HorizontalOptions="Center"
+    VerticalOptions="End"
+    BorderColor="Transparent" 
+    Clicked="OnEquipoClicked"/>
+
+                    <Label 
+    Grid.Row="5" 
+    Grid.Column="1"
+    Text="EQUIPO"
+    HorizontalOptions="Center"
+    VerticalOptions="Start"
+    FontSize="16"
+    TextColor="Beige" />
+
+                </Grid>
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </Frame>
+</ContentPage>
